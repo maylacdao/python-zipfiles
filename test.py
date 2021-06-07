@@ -2,9 +2,11 @@
 import shutil
 
 # shutil.make_archive('new', 'zip', 'files')
+shutil.make_archive('new', 'gztar', 'files')
 #('name','file type', 'directory')
 
-shutil.unpack_archive('new.zip', 'new')
+
+# shutil.unpack_archive('new.zip', 'new')
 #('name of zipfile','directory')
 
 # FILE TYPES
