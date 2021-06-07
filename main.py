@@ -12,3 +12,7 @@ with open('data.zip', 'wb') as f:
 with zipfile.ZipFile('data.zip', 'r') as data_zip:
     print(data_zip.namelist())
     data_zip.extractall('data')
+
+# Points for improvement
+# build a scraper for links, then connect this python script with that
+# create for loop when dealing with multiple files
