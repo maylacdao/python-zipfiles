@@ -30,7 +30,4 @@ import zipfile
 with zipfile.ZipFile('files.zip', 'r') as my_zip:
     print(my_zip.namelist())  # get a list of filenames in the zipfile
     my_zip.extractall('files')  # ('name of directory')
-
-# with zipfile.ZipFile('201306_citibike_tripdata.zip', 'r') as test_zip:
-#     print(test_zip.namelist())
-#     test_zip.extractall('citibike')
+    my_zip.extract('chalk.jpg')  # extract specific file
