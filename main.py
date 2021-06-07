@@ -1,3 +1,5 @@
+# CREATING ZIP FILES
+
 #import dependencies
 
 import zipfile
@@ -19,6 +21,16 @@ import zipfile
 # context managers - handles opening and closing of files
 # compression parameter - to create compressed zip files
 
-with zipfile.ZipFile('files.zip', 'w', compression=zipfile.ZIP_DEFLATED) as my_zip:
-    my_zip.write('test.txt')
-    my_zip.write('chalk.jpg')
+# with zipfile.ZipFile('files.zip', 'w', compression=zipfile.ZIP_DEFLATED) as my_zip:
+#     my_zip.write('test.txt')
+#     my_zip.write('chalk.jpg')
+
+# READING ZIP FILES
+
+with zipfile.ZipFile('files.zip', 'r') as my_zip:
+    print(my_zip.namelist())  # get a list of filenames in the zipfile
+    my_zip.extractall('files')  # ('name of directory')
+
+# with zipfile.ZipFile('201306_citibike_tripdata.zip', 'r') as test_zip:
+#     print(test_zip.namelist())
+#     test_zip.extractall('citibike')
